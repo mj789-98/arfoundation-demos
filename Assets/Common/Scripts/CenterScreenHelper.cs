@@ -30,7 +30,7 @@ public class CenterScreenHelper : MonoBehaviour
         m_MidPointWidth = Screen.width / 2;
         m_MidPointHeight = Screen.height / 2;
 
-        if (m_CurrentOrientation == ScreenOrientation.Landscape)
+        if (m_CurrentOrientation == ScreenOrientation.LandscapeLeft)
         {
             m_CenterScreenVert = new Vector2(m_MidPointHeight, m_MidPointWidth);
             m_CenterScreenHor  = new Vector2(m_MidPointWidth, m_MidPointHeight);
@@ -50,6 +50,6 @@ public class CenterScreenHelper : MonoBehaviour
             m_CurrentOrientation = Screen.orientation;
         }
 
-        return m_CurrentOrientation == ScreenOrientation.Landscape ? m_CenterScreenHor : m_CenterScreenVert;
+        return m_CurrentOrientation == ScreenOrientation.LandscapeLeft ? m_CenterScreenHor : m_CenterScreenVert;
     }
 }
